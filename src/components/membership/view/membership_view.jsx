@@ -12,7 +12,7 @@ function MembershipView() {
 
             {/* Hero Section */}
             <div className="relative border-b-1 border-zinc-800 px-24 pt-52 pb-32 overflow-hidden -mt-20"
-                style={{ background: 'radial-gradient(ellipse at 60% 40%, #f1057b98 0%, #0a0a0a 65%)' }}>
+                style={{ background: 'radial-gradient(ellipse at 40% 60%, #f1057b98 0%, #0a0a0a 65%)' }}>
                 <p className="text-pink-500 font-mono text-sm tracking-wider">Member Registration</p>
                 <h1 className="text-white text-7xl font-sans font-extrabold tracking-tight">
                     For whole <span className="text-7xl font-sans font-extrabold neon-pink tracking-tight">life.</span>
