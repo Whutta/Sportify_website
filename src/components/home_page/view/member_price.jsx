@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 function MemberPrice() {
     return (
         <div className="bg-black px-30">
@@ -21,14 +23,14 @@ function MemberPrice() {
                         <p className="text-gray-400 font-mono text-sm mt-2 tracking-wider">LIFETIME PERKS</p>
                     </div>
                 </div>
-                <div className="flex items-center gap-2 bg-pink-600 rounded-full px-4 py-3 w-fit mt-10 cursor-pointer justify-center transition-all duration-300 hover:scale-105 hover:shadow-[0_0_15px_#db2777]">
+                <Link to="/membership" className="flex items-center gap-2 bg-pink-600 rounded-full px-4 py-3 w-fit mt-10 cursor-pointer justify-center transition-all duration-300 hover:scale-105 hover:shadow-[0_0_15px_#db2777]">
                     <div className="text-black font-bold ">
                         See full member benefits
                     </div>
                     <button className="text-black">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-icon lucide-arrow-right"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
                     </button>
-                </div>
+                </Link>
             </div>
         </div>
     )

@@ -4,9 +4,7 @@ import Footer from '../../home_page/view/footer';
 function ContactView() {
     return (
         <>
-        <div className="bg-black min-h-screen text-white">
-
-            {/* Hero Section */}
+                <div className="bg-black min-h-screen text-white">
             <div className="relative border-b-1 border-zinc-800 px-24 pt-52 pb-32 overflow-hidden -mt-20"
                 style={{ background: 'radial-gradient(ellipse at 60% 40%, #f1057b98 0%, #0a0a0a 65%)' }}>
                 <p className="text-gray-300 font-mono tracking-wider">VISIT & BOOK</p>
@@ -30,7 +28,7 @@ function ContactView() {
                             </div>
                             <div>
                                 <p className="text-gray-500 text-xs font-mono">VISIT US</p>
-                                <p className="text-white font-bold text-2xl">Sportify Arena, Malaysia</p>
+                                <p className="text-white font-bold text-2xl">Sportify Kuching, Malaysia</p>
                             </div>
                         </div>
 

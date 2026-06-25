@@ -1,7 +1,8 @@
 import sportifyLogo from '../../../assets/sportify_logo.png';
-import { Link } from 'react-router-dom';    
+import { Link, useNavigate } from 'react-router-dom';    
 
 function Navbar() {
+    const navigate = useNavigate()
     return (
         <nav className="sticky top-0 z-50 flex items-center justify-around px-18 h-20 font-mono bg-black/80 backdrop-blur-sm">
             <Link to="/">
@@ -19,11 +20,11 @@ function Navbar() {
                     <li className="nav-link">Birthday</li>
                     <li className="nav-link">Food</li>
                     <li className="nav-link"><Link to="/membership" className="nav-link">Membership</Link></li>
-                    <li className=""><Link to="/contact" className="nav-link">Contact</Link></li>
+                    <li className="nav-link"><Link to="/contact" className="nav-link">Contact</Link></li>
                 </ul>
             </div>
             <div>
-                <button className="text-black px-5 py-2 rounded-3xl cursor-pointer font-medium bg-pink-600 font-semibold transition-all duration-300 hover:scale-105 hover:shadow-[0_0_15px_#db2777]">Book Now</button>
+                <button onClick={() => navigate('/#contact')} className="text-black px-5 py-2 rounded-3xl cursor-pointer font-medium bg-pink-600 font-semibold transition-all duration-300 hover:scale-105 hover:shadow-[0_0_15px_#db2777]">Book Now</button>
             </div>
         </nav>
     )
