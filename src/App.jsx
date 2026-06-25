@@ -1,6 +1,7 @@
 import './index.css'
 import './App.css'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { useEffect } from 'react'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import Navbar from './components/home_page/view/navbar'
 import Hero from './components/home_page/view/hero'
 import Carousel from './components/home_page/view/carousel'
@@ -11,10 +12,25 @@ import Footer from './components/home_page/view/footer'
 import ContactView from './components/contact_page/view/contact_view'
 import MembershipView from './components/membership/view/membership_view'
 
+function ScrollToHash() {
+  const { hash } = useLocation()
+  useEffect(() => {
+    if (hash) {
+      const id = hash.replace('#', '')
+      const element = document.getElementById(id)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    }
+  }, [hash])
+  return null
+}
+
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
+      <ScrollToHash />
       <Routes>
         <Route path="/" element={
           <div className="relative min-h-screen w-full">
@@ -30,8 +46,12 @@ function App() {
             </div>
             <Carousel />
             <Services />
-            <MemberPrice />
-            <ContactUs />
+            <div id="member-pricing">
+              <MemberPrice />
+            </div>
+            <div id="contact">
+              <ContactUs />
+            </div>
             <Footer />
           </div>
         } />

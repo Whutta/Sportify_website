@@ -1,4 +1,7 @@
+import { useNavigate } from 'react-router-dom'
+
 function Hero() {
+    const navigate = useNavigate()
     return (
         <div className="flex flex-col px-30 py-30 pt-10 pb-20">
             <div className="text-white border-1 border-gray-500 rounded-xl text-center w-78 font-mono text-sm py-1">
@@ -17,7 +20,7 @@ function Hero() {
                 <button className="text-black font-bold px-8 py-3 rounded-4xl bg-pink-600 cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-[0_0_15px_#db2777]">
                     Explore the playground
                 </button>
-                <button className="bg-transparent border border-gray-500 text-white px-6 py-4 rounded-4xl cursor-pointer transition-all duration-300 hover:bg-gray-900">
+                <button onClick={() => navigate('/#member-pricing')} className="bg-transparent border border-gray-500 text-white px-6 py-4 rounded-4xl cursor-pointer transition-all duration-300 hover:bg-gray-900">
                     See member pricing
                 </button>
             </div>
